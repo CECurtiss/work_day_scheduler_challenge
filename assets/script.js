@@ -5,8 +5,9 @@ var saveBtn = $('.saveBtn');
 
 
 $('.saveBtn').click(function() {
-    // localStorage.setItem("savedtodo",JSON.stringify( $('#savedtodo').val()
-    // 
+    var savedText = $(this).siblings('.description').val();
+    console.log(savedText);
+    
 
 });
 
