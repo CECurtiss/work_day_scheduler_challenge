@@ -1,6 +1,10 @@
 currentDay = moment().format("dddd, MMMM DD YYYY");
 $('#currentDay').text(currentDay);
+var savedToDo = $('#savedtodo');
+var saveBtn = $('.saveBtn');
 
-var containerEl = $('.container');
+localStorage.getItem(savedToDo).value;
 
-containerEl.css('border', 'rgb(243,195,094) 5 px, solid');
+saveBtn.addEventListener("click",function() {
+    localStorage.setItem(savedToDo).value;
+})
