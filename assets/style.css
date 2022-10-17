@@ -60,10 +60,10 @@ textarea{
 
 .saveBtn {
   border-left: 1px solid black;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background-color: #06AED5;
+  border-radius:30px;
+  background-color: #06d536;
   color: white;
+  height:50%;
 }
 
 .saveBtn i:hover {

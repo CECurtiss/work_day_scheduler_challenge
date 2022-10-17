@@ -10,3 +10,7 @@ $('.saveBtn').click(function() {
 
 
 JSON.parse(localStorage.getItem('savedtodo'));
+
+currentTime= moment().hour();
+console.log(currentTime);
+
