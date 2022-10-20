@@ -24,13 +24,22 @@ $('.saveBtn').click(function() {
 
 function colorCode() {
     currentTime= moment().hour();
+console.log(currentTime);
     $(".hour").each(function() {
-      if (currentTime > data-time) {
-        document.time-block.addClass('past');
-    } else if (currentTime = data-time){
-        document.time-block.addClass('present');
-    } else if (currentTime < data.time){
-        document.time-block.addClass('future');
+        var timeRow = parseInt($(this).data("hour"));
+        console.log(timeRow);
+      if (currentTime > timeRow) {
+        $(this).siblings().addClass('past');
+        $(this).removeClass('present');
+        $(this).removeClass('future');
+    } else if (currentTime === timeRow){
+        $(this).siblings().addClass('present');
+        $(this).removeClass('past');
+        $(this).removeClass('future');
+    } else if (currentTime < timeRow){
+        $(this).siblings().addClass('future');
+        $(this).removeClass('past');
+        $(this).removeClass('present');
     }
 });
 }
