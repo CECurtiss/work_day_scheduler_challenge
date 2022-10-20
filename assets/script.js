@@ -23,15 +23,16 @@ $('.saveBtn').click(function() {
 });
 
 function colorCode() {
-    // currentTime= moment().hour();
-    currentTime=12;
-    if (currentTime > data-time) {
+    currentTime= moment().hour();
+    $(".hour").each(function() {
+      if (currentTime > data-time) {
         document.time-block.addClass('past');
     } else if (currentTime = data-time){
         document.time-block.addClass('present');
     } else if (currentTime < data.time){
         document.time-block.addClass('future');
     }
+});
 }
 
 colorCode();
